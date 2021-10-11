@@ -1,0 +1,156 @@
+<html>
+<head>
+<style>
+body
+{
+    background-color: #BFBFBF;
+}
+h1
+{
+    background-color: #8C8C8C;
+    color: WHITE;
+    text-align: center;
+}
+textarea {
+  resize: none;
+  border: dashed #404040;
+}
+nav
+{
+    text-align: center;
+    height: auto;
+    width:50%;
+	float:left;
+	height: auto;
+    letter-spacing: 2px;
+}
+aside
+{
+    text-align: center;
+    height: auto;
+    float:right;
+    width:50%;
+	height: auto;
+}
+footer, a
+{
+    clear: both;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: none;
+    color: #0D0D0D;
+    background:#BFBFBF;
+}
+hr 
+{
+  border: 1px solid #404040;
+}
+</style>
+</head>
+<body>
+
+<h1>Galeria</h1><br>
+
+<nav>
+
+    <textarea id="Lewa" name="Lewa" rows="45" cols="80">
+       
+        <?php
+       $user= 'root';
+       $pass= '';
+       $host = 'localhost';
+       $base = '4k';    //tutaj nazwa twojej bazy
+       $con= mysqli_connect($host,$user,$pass, $base);
+       mysqli_select_db($con,$base);
+      
+        if(isset($_GET['sub']))
+             {
+         
+                 $imie = $_GET['imie'];
+                 $nazwisko = $_GET['nazwisko'];
+                 $srednia = $_GET['srednia'];
+    $query = "Insert into uczen( imie, nazwisko, srednia) values( '$imie', '$nazwisko', '$srednia')";
+    $run =mysqli_query($con,$query) or die(mysqli_error());
+    
+    if($run)
+    {
+        echo "Formularz zatwierdzony";
+    }
+    else
+    {
+        echo "formularz jest błędny";
+    }
+             }
+    ?>
+    
+    <html>
+        <head>
+            <body>
+    <form action="" method="get">
+    Imie:<input type="text" name="imie"><br>
+    Nazwisko:<input type="text" name="nazwisko"><br>
+    Srednia:<input type="text" name="srednia"><br>
+    <input name="sub" type="submit" value="ok">
+    </form>
+             <body>
+        </head>
+    </html>
+
+    </textarea>
+
+</nav>
+
+
+<aside>
+
+    <textarea id="Prawa" name="Prawa" rows="45" cols="115">
+        
+        <html>
+    <head>
+        <body>
+            <form>
+
+                <input type="button" name="przycisk" value="Pierwszy Gif" onclick="WinOpen('')">
+                <input type="button" name="przycisk" value="Drugi Gif" onclick="WinOpen2('')">
+                <input type="button" name="przycisk" value="Trzeci Gif" onclick="WinOpen3('')">
+                <input type="button" name="przycisk" value="Czwarty Gif" onclick="WinOpen4('')">
+            </form>
+        </body>
+    </head>
+</html>
+
+<script type="text/javascript">
+             function WinOpen()
+             {
+                 window.open("obraz.html","okienko1","toolbar=no,directories=no,menubar=no,height=400,width=500,top=200,left=200");
+             }   
+
+             function WinOpen2()
+             {
+                 window.open("obraz2.html","okienko2","toolbar=no,directories=no,menubar=no,height=600,width=600,top=200,left=200");
+             }   
+
+             function WinOpen3()
+             {
+                 window.open("obraz3.html","okienko3","toolbar=no,directories=no,menubar=no,height=400,width=500,top=200,left=200");
+             }   
+
+             function WinOpen4()
+             {
+                 window.open("obraz4.html","okienko4","toolbar=no,directories=no,menubar=no,height=600,width=500,top=200,left=200");
+             }   
+</script>
+</script>
+
+    </textarea>
+
+</aside>
+
+<footer>
+    <br><hr>
+    <a href="cv.html">Link Do Mojego CV</a>
+    <br><hr>
+</footer>
+
+</body>
+</html>
