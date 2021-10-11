@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+
+    <script>
+        function liczba()
+            {
+
+                a=document.getElementById("a1").value;
+                b=document.getElementById("b1").value;
+                c=document.getElementById("c1").value;
+                
+                document.getElementById("div_lewy").innerHTML="Liczba muszkieterów: " + a + "<br>Liczba artylerzystów: " + b + "<br>Liczba kawalerzystów: " + c;
+                
+                
+                
+            }
+    
+    </script>
+
+</head>
+    <body>
+
+        <div id="div_gora">
+        <a href="https://pl.wikipedia.org/wiki/Burgundia">
+        <img src="herb.png"></a> 
+            
+        </div>
+        
+        <div id="div_lewy">
+        </div>
+
+        <div id="div_prawy">
+            <br>
+            Liczba muszkieterów: <input Id="a1" ><br>
+            Liczba artylerzystów: <input Id="b1" ><br>
+            Liczba kawalerzystów: <input Id="c1" >
+
+            <button type="button" onclick="liczba();">Wyświetl</button>
+        </div>
+        
+        <div id="div_dol">
+        <img src="rycerz.gif"></a> 
+        </div>
+      </body>
+
+
+
+<style>
+
+button
+    {
+    font-size: 30px;
+    }
+input
+{
+    font-size: 30px;
+    }
+
+img {
+  width: 150px;
+  height: 150px;
+  margin: 3px;
+  padding: 3px;
+  text-align: left;
+}
+
+#div_gora
+{
+height: 350px; 
+width: 100%;
+background-color:blue; 
+}
+#div_lewy
+{
+height:  300px; 
+width:50%; 
+background-color:red;
+float:left;   
+text-align: center;
+size: 100px;
+font-size: 85px;
+
+
+}
+
+#div_prawy
+{
+height: 300px; 
+width:50%; 
+background-color:green; 
+float:right; 
+text-align: center;
+font-size: 50px;
+}
+
+#div_dol
+{
+height: 300px;
+width: 100%;
+background-color:#800020; 
+float: left;
+}
+</style>

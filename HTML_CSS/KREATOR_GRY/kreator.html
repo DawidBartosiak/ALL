@@ -1,0 +1,271 @@
+<html>
+<head>
+    <title>GTA 5</title>
+    <meta charset="utf-8"/>
+
+    <script>
+
+        function klasa(specjalnaumiejetnosc,kondycja,strzelanie,sila,skradanie)
+        {
+            this.spc = specjalnaumiejetnosc;
+            this.kond = kondycja;
+            this.strz = strzelanie;
+            this.sila = sila;
+            this.skr = skradanie;
+        }
+
+        function wys()
+        {
+            const Franklin = new klasa("Zwolnione tempo podczas szybkiej jazdy", "60 / 100", "80 / 100", "100 / 100", "80 / 100")
+            const Michael = new klasa("Zwolnione tempo podczas celowania", "100 / 100", "100 / 100", "80 / 100", "60 / 100")
+            const Trevor = new klasa("Zwiększone obrażenia podczas strzałów", "50 / 100", "100 / 100", "70 / 100", "30 / 100")
+            const Simeon = new klasa("Stalowe gacie", "40 / 100", "60 / 100", "40 / 100", " 80 / 100")
+            const Lester = new klasa("Picie wody po pierogach", "10 / 100", "20 / 100", "40 / 100", "50 / 100")
+            const Madrazo = new klasa("Nielimitowana gotówka", "30 / 100", "50 / 100", "30 / 100", "80 / 100")
+            const Cheng = new klasa("Widok w 180 stopniach", "20 / 100", "30 / 100", "50 / 100", "60 / 100")
+            const Dave = new klasa("Zwiększona szybkość biegu", "10 / 100", "20 / 100", "50 / 100", "60 / 100")
+            const Steve = new klasa("Szybkie rozwalanie samochodów", "90 / 100", "20 / 100", "40 / 100", "50 / 100")
+            const Devin = new klasa("Naprawianie broni", "100 / 100", "20 / 100", "50 / 100", "70 / 100")
+            const Ron = new klasa("Szybsze dzyskiwanie zrowia", "50 / 100", "70 / 100", "20 / 100", "30 / 100")
+            const Lamar = new klasa("Nieśmiertelność", "40 / 100", "50 / 100", "70 / 100", "20 / 100")
+            const Amanda = new klasa("Rozkładanie nóg", "40 / 100", "50 / 100", "60 / 100", "20 / 100")
+            const Lazlow = new klasa("Czytanie w myślach", "10 / 100", "40 / 100", "20 / 100", "90 / 100")
+            const Wade = new klasa("Wkurzanie Trevora", "110 / 100", "20 / 100", "40 / 100", "60 / 100")
+
+
+            var nick = nazwa.value;
+            var postac = wybor.value;
+
+            switch(postac)
+            {
+                case 'Franklin':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Franklin.spc + "<br> Kondycja: " + Franklin.kond + "<br> Strzelanie: " + Franklin.strz + "<br> Siła: " + Franklin.sila + "<br> Skradanie się: " + Franklin.skr;
+                    var plik ="<img src = \"kij.png\"/>";
+                    eq.innerHTML = plik;
+                break;
+
+                case 'Michael':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Michael.spc + "<br> Kondycja: " + Michael.kond + "<br> Strzelanie: " + Michael.strz + "<br> Siła: " + Michael.sila + "<br> Skradanie się: " + Michael.skr;
+                    var plik1 ="<img src = \"karabinek.png\"/>";
+                    eq.innerHTML = plik1;
+                break;
+
+                case 'Trevor':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Trevor.spc + "<br> Kondycja: " + Trevor.kond + "<br> Strzelanie: " + Trevor.strz + "<br> Siła: " + Trevor.sila + "<br> Skradanie się: " + Trevor.skr;
+                    var plik2 ="<img src = \"rpg.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Simeon':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Simeon.spc + "<br> Kondycja: " + Simeon.kond + "<br> Strzelanie: " + Simeon.strz + "<br> Siła: " + Simeon.sila + "<br> Skradanie się: " + Simeon.skr;
+                    var plik2 ="<img src = \"gusenberg.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Lester':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Lester.spc + "<br> Kondycja: " + Lester.kond + "<br> Strzelanie: " + Lester.strz + "<br> Siła: " + Lester.sila + "<br> Skradanie się: " + Lester.skr;
+                    var plik2 ="<img src = \"pdw.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Madrazo':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Madrazo.spc + "<br> Kondycja: " + Madrazo.kond + "<br> Strzelanie: " + Madrazo.strz + "<br> Siła: " + Madrazo.sila + "<br> Skradanie się: " + Madrazo.skr;
+                    var plik2 ="<img src = \"kosiarz.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Cheng':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Cheng.spc + "<br> Kondycja: " + Cheng.kond + "<br> Strzelanie: " + Cheng.strz + "<br> Siła: " + Cheng.sila + "<br> Skradanie się: " + Cheng.skr;
+                    var plik2 ="<img src = \"szturmowy.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Dave':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Dave.spc + "<br> Kondycja: " + Dave.kond + "<br> Strzelanie: " + Dave.strz + "<br> Siła: " + Dave.sila + "<br> Skradanie się: " + Dave.skr;
+                    var plik2 ="<img src = \"kompaktowy.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Steve':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Steve.spc + "<br> Kondycja: " + Steve.kond + "<br> Strzelanie: " + Steve.strz + "<br> Siła: " + Steve.sila + "<br> Skradanie się: " + Steve.skr;
+                    var plik2 ="<img src = \"bezkolbowy.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Devin':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Devin.spc + "<br> Kondycja: " + Devin.kond + "<br> Strzelanie: " + Devin.strz + "<br> Siła: " + Devin.sila + "<br> Skradanie się: " + Devin.skr;
+                    var plik2 ="<img src = \"mingun.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Ron':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Ron.spc + "<br> Kondycja: " + Ron.kond + "<br> Strzelanie: " + Ron.strz + "<br> Siła: " + Ron.sila + "<br> Skradanie się: " + Ron.skr;
+                    var plik2 ="<img src = \"wyborowy.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Lamar':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Lamar.spc + "<br> Kondycja: " + Lamar.kond + "<br> Strzelanie: " + Lamar.strz + "<br> Siła: " + Lamar.sila + "<br> Skradanie się: " + Lamar.skr;
+                    var plik2 ="<img src = \"obrzyn.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Amanda':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Amanda.spc + "<br> Kondycja: " + Amanda.kond + "<br> Strzelanie: " + Amanda.strz + "<br> Siła: " + Amanda.sila + "<br> Skradanie się: " + Amanda.skr;
+                    var plik2 ="<img src = \"muszkiet.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Lazlow':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Lazlow.spc + "<br> Kondycja: " + Lazlow.kond + "<br> Strzelanie: " + Lazlow.strz + "<br> Siła: " + Lazlow.sila + "<br> Skradanie się: " + Lazlow.skr;
+                    var plik2 ="<img src = \"dwururka.png\">";
+                    eq.innerHTML = plik2;
+                break;
+
+                case 'Wade':
+                    stats.innerHTML = "Twój Nick: "+ nick+ "<br> Specjalna umiejętność: " + Wade.spc + "<br> Kondycja: " + Wade.kond + "<br> Strzelanie: " + Wade.strz + "<br> Siła: " + Wade.sila + "<br> Skradanie się: " + Wade.skr;
+                    var plik2 ="<img src = \"granatnik.png\">";
+                    eq.innerHTML = plik2;
+                break;
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <div id="tytul">GTA V</div>
+
+    <div id="obraz">
+        <img src="gta.png" width="300px" height="300px"/>
+    </div>
+
+    <div id="postac">
+        <p>Twój nick: </p><br>
+        
+        <input type="text" size="10" id="nazwa"/><br>
+
+        <p>Wybierz postać:</p><br>
+
+        <select id="wybor">
+            <option value="Franklin">Franklin Clinton</option>
+            <option value="Michael">Michael De Santa</option>
+            <option value="Trevor">Trevor Philips</option>
+            <option value="Simeon">Simeon Yetarian</option>
+            <option value="Lester">Lester Crest</option>
+            <option value="Madrazo">Martin Madrazo</option>
+            <option value="Cheng">Tao Cheng</option>
+            <option value="Dave">Dave Norton</option>
+            <option value="Steve">Steve Haines</option>
+            <option value="Devin">Devin Weston</option>
+            <option value="Ron">Ron Jakowski</option>
+            <option value="Lamar">Lamar Davis</option>
+            <option value="Amanda">Amanda De Santa</option>
+            <option value="Lazlow">Lazlow Jones</option>
+            <option value="Wade">Wade Hebert</option>
+        </select>
+
+        <br><br><br>
+
+        <input type="submit" value="Graj" onclick="wys()"/>
+    </div>
+
+    <div style="clear:both;"></div>
+
+    <div id="napis">
+        <p>Statystyki</p><br>
+    </div>
+
+    <div id="napis1">
+        <p>Ekwipunek</p>
+    </div>
+
+    <div style="clear:both;"></div>
+
+    <div id="stats"></div>
+    <div id="eq"> </div>
+
+</body>
+</html>
+
+<style>
+    body
+{
+    background-color: #588C6F;
+    margin: 0;
+    padding: 0;
+}
+
+#tytul
+{
+    width: 100%;
+    height: 100px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 70px;
+    color: #F2BA52;
+}
+
+#obraz
+{
+    float: right;
+    width: 55%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#postac
+{
+    float: right;
+    width: 45%;
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    height: 310px;
+}
+
+p
+{
+    color: #F2A29B;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+#stats
+{
+    float: right;
+    width: 55%;
+    height: 300px;
+    text-align: center;
+    color: #AC1923;
+    font-size: 30px;
+    margin-top: 20px;
+
+}
+
+#eq
+{
+    float: right;
+    width: 45%;
+    height: 300px;
+    text-align: center;
+    color: #F2A29B;
+    margin-top: 20px;
+}
+
+#napis
+{
+    float: right;
+    width: 55%;
+    height: 80px;
+    text-align: center;
+}
+
+#napis1
+{
+    float: right;
+    width: 45%;
+    height: 50px;
+    text-align: center;
+}
+</style>
