@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script type="text/javascript">
+       
+       function klient(nazwisko_k,imie_k,zawod_k) //początek konstruktora
+        {
+                this.nazwisko = nazwisko_k;
+                this.imie = imie_k;
+                this.zawod = zawod_k;
+        } //koniec konstruktora
+            
+        klient.prototype.wypisz=function() //definicja metody
+            {
+                alert(this.nazwisko + ' ' + this.imie + ' ' + this.zawod);
+            };
+
+        var osoba1 = new klient("Kowalski", "jan", "kierowca");//nowy obiekt osoba1
+        var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');
+        var osoba3 = new klient("Bartosiak", "Dawid", "Programista");
+        var osoba4 = new klient('Stasiak', 'Adam', 'Magaynier');
+        var osoba5 = new klient("Zacharewicz", "Mateusz", "Nauczyciel");
+        
+        osoba1.wypisz();//uruchomienie metody wypisz() dotyczącej osoby 1
+        osoba2.wypisz(); 
+        osoba3.wypisz(); 
+        osoba4.wypisz(); 
+        osoba5.wypisz(); 
+
+        document.write("dostęp do właściwości"+"<br>");
+        //poniżej dostęp do pól osoby1
+        document.write("klient pierwszy" + "osoba1.nazwisko" + "osoba1.imie" + "osoba1.zawod");
+        document.write("klient drugi" + "osoba2.nazwisko" + "osoba2.imie" + "osoba2.zawod");
+        document.write("klient trzeci" + "osoba3.nazwisko" + "osoba3.imie" + "osoba3.zawod");
+        document.write("klient czwarty" + "osoba4.nazwisko" + "osoba4.imie" + "osoba4.zawod");
+        document.write("klient piąty" + "osoba5.nazwisko" + "osoba5.imie" + "osoba5.zawod");
+        </script>
+    </head>
+    <body>
+        <br>
+        programowanie obiektowe
+    </body>
+</html>
